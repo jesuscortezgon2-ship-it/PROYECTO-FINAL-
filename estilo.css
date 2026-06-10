@@ -1,0 +1,286 @@
+/* --- CONFIGURACIONES GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0f19; /* Fondo general más oscuro para resaltar la estética digital */
+    color: #cbd5e1; /* Texto claro para mejor contraste en fondo oscuro */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- ENCABEZADO Y COMPORTAMIENTO DEL DESPLEGABLE --- */
+header {
+    background-color: rgba(11, 15, 25, 0.9); /* Transparencia estilo vidrio (glassmorphism) */
+    backdrop-filter: blur(10px); /* Efecto difuminado digital moderno */
+    color: #fff;
+    padding: 15px 0;
+    position: absolute; /* Modificado para que flote sobre la pantalla completa */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2); /* Línea sutil ciber */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #00f2fe; /* Azul cian brillante (más tecnológico) */
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5); /* Destello digital */
+}
+
+/* Contenedor del menú interactivo */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Botón indicador (Flecha) */
+.dropdown-btn {
+    background-color: #1e293b;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: #00f2fe;
+    border-color: #00f2fe;
+    color: #0b0f19;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+.flecha {
+    font-size: 11px;
+    transition: transform 0.3s;
+}
+
+/* Lista oculta por defecto */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #1e293b; /* Fondo oscuro acoplado al tema */
+    min-width: 160px;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.5);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 5px;
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+/* Enlaces dentro del menú */
+.dropdown-content a {
+    color: #cbd5e1;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+/* Color al pasar el cursor sobre las opciones */
+.dropdown-content a:hover {
+    background-color: rgba(0, 242, 254, 0.1);
+    color: #00f2fe;
+}
+
+/* Muestra el menú al interactuar con él */
+.dropdown:hover .dropdown-content,
+.dropdown-btn:focus + .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+/* Animación de la flecha */
+.dropdown:hover .flecha {
+    transform: rotate(180deg);
+}
+
+/* --- SECCIÓN INICIO (HERO - PANTALLA COMPLETA CULTURA DIGITAL) --- */
+.hero {
+    background: linear-gradient(rgba(11, 15, 25, 0.7), rgba(11, 15, 25, 0.9)), 
+                url('cultura digital.jpeg') no-repeat center center/cover;
+    color: #fff;
+    min-height: 100vh; /* Ajustado a pantalla completa */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero .materia {
+    font-size: 22px;
+    color: #00f2fe; /* Color neón */
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+}
+
+.hero .integrantes {
+    font-size: 15px;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #00f2fe, #4facfe); /* Botón con degradado digital */
+    color: #0b0f19;
+    padding: 12px 35px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.6);
+}
+/* --- SECCIONES DE CONTENIDO GENERAL --- */
+.content-section {
+    padding: 80px 0;
+    min-height: 65vh;
+    position: relative; /* Asegura el correcto posicionamiento de los elementos hijos */
+}
+
+/* --- FONDOS INDIVIDUALES PARA CADA PARCIAL --- */
+.bg-parcial1 {
+    background: linear-gradient(rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.85)), 
+                url('parcial\ 1.jpg') no-repeat center center/cover !important;
+}
+
+.bg-parcial2 {
+    background: linear-gradient(rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.85)), 
+                url('parcial\ 2.jpeg') no-repeat center center/cover !important;
+}
+
+.bg-parcial3 {
+    background: linear-gradient(rgba(11, 15, 25, 0.85), rgba(11, 15, 25, 0.85)), 
+                url('parcial\ 3.jpg') no-repeat center center/cover !important;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+/* Tarjetas (cards) estilizadas estilo traslúcido */
+.card {
+    background-color: rgba(30, 41, 59, 0.7); 
+    backdrop-filter: blur(5px); 
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    border-left: 5px solid #00f2fe; 
+}
+
+.card h4 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #cbd5e1;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* Botón especial para visualizar / descargar documentos */
+.btn-descarga {
+    display: inline-block;
+    background-color: #0f172a;
+    color: #00f2fe;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid #00f2fe;
+}
+
+.btn-descarga:hover {
+    background-color: #00f2fe;
+    color: #0b0f19;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 242, 254, 0.3);
+}
+
+/* --- PIE DE PÁGINA --- */
+footer {
+    background-color: #070a12;
+    color: #475569;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Ajuste responsivo */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .hero h2 {
+        font-size: 32px;
+    }
+}
